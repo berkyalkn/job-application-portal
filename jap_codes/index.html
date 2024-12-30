@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 15px 50px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin-right: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #4CAF50;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .hero-text {
+            background-color: #4CAF50;
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-text h2 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 22px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #4CAF50;
+            font-weight: 600;
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 40px;
+            line-height: 1.5;
+            max-width: 600px;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">Job Application Portal</div>
+        <div>
+            <a href="./pages/login/login.html">Login</a>
+            <a href="./pages/register/register.html">Register</a>
+        </div>
+    </div>
+
+    <div class="hero-text">
+        <div>
+            <h2>Welcome to the Job Application Portal</h2>
+            <p>Find your dream job or post new job opportunities with ease. Your next opportunity is just a click away.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Start Your Journey Today</h1>
+        <p>Join thousands of job seekers and employers on our platform. Whether you're looking for your first job or hiring your next employee, we provide the tools and resources you need.</p>
+
+        <div class="btn-container">
+            <a href="./pages/login/login.html" class="btn">Login</a>
+            <a href="./pages/register/register.html" class="btn">Register</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Job Application Portal. All Rights Reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
+
+</body>
+</html>
+
+

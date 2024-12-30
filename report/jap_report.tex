@@ -1,0 +1,402 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[utf8]{inputenc} 
+\usepackage{amsmath} 
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{longtable}
+\usepackage{fancyhdr} 
+\usepackage{geometry} 
+\geometry{top=1in, bottom=1in, left=1in, right=1in}
+
+
+\pagestyle{fancy}
+\fancyhead[L]{Job Application Portal Report}
+\fancyhead[C]{Berkay Alkan}
+\fancyhead[R]{30 December 2024}
+
+
+\title{Job Application Portal - Project Report}
+\author{Berkay Alkan}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This document provides an overview of the Job Application Portal project. It outlines the project’s objectives, features, technologies used, database structure, instructions for setup-usage and user interfaces.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\listoffigures
+\newpage
+
+
+\section{Introduction}
+The purpose of this project is to develop a web-based Job Application Portal that connects job seekers with employers. The portal allows users to apply for jobs, create job listings, and manage their profiles. The system has been designed to be simple, user-friendly, and efficient.
+
+\subsection{Project Goals}
+The main goal of this project is to facilitate job searching and application processes for users. Employers can post job listings, while job seekers can search for jobs, view detailed descriptions, and submit applications.
+
+\subsection{Scope}
+The project covers the development of the following features:
+\begin{itemize}
+    \item User Registration and Login
+    \item Job Search and Filters (for Job Seekers)
+    \item Job Listing Creation (for Employers)
+    \item Job Application Management
+    \item User Profile Management (for both Job Seekers and Employers)
+    \item Admin Dashboard and Management
+\end{itemize}
+
+\subsection{Target Audience}
+The system is intended for job seekers, employers, and administrators. Job seekers can browse job listings and apply to their desired positions, while employers can post job advertisements and manage applications. Administrators can manage job seekers and employers.
+
+\newpage
+
+\section{Technologies Used}
+The following technologies were used in the development of this project:
+
+\begin{itemize}
+    \item \textbf{Frontend}: HTML, CSS, JavaScript, jQuery
+    \item \textbf{Backend}: PHP
+    \item \textbf{Database}: MySQL
+    \item \textbf{Server}: MAMP
+\end{itemize}
+
+\newpage
+
+\section{System Requirements}
+\begin{itemize}
+    \item XAMPP or MAMP installed
+    \item PHP version 7.0 or higher
+    \item MySQL database setup
+\end{itemize}
+
+\newpage
+
+\section{Project Features}
+
+\subsection{User Registration and Login (Common for All Users)}
+Users can register an account by providing basic information such as name, email, and password. After registration, they can log in to access the relevant features based on their roles (Job Seeker, Employer, or Admin).
+
+\subsection{Password Reset (Common for All Users)}
+Users can reset their password in case they forget it by providing their email address. An email with a password reset link is sent to the user.
+
+\subsection{Job Seeker Features}
+\subsubsection{Search Jobs}
+Job seekers can search for jobs using various filters such as job title,  job type, location etc.
+
+\subsubsection{Job Seeker Dashboard}
+After logging in, job seekers are redirected to their dashboard, where they can view applied jobs, search jobs, and manage their profile.
+
+\subsubsection{View Applications}
+Job seekers can view the jobs that they applied before.
+
+\subsubsection{Profile Management}
+Job seekers can manage and update their profile information.
+
+\newpage
+
+\subsection{Employer Features}
+\subsubsection{Employer Dashboard}
+Employers can access their dashboard after logging in, where they can manage posted jobs, view applicants, and update their profile.
+
+\subsubsection{Posting a Job}
+Employers can post new job listings by filling out job details such as title, description, salary, and location etc.
+
+\subsubsection{Manage Jobs}
+Employers can view, edit, or delete their posted job listings from manage jobs page.
+
+\subsubsection{View Applicants}
+Employers can view job applications submitted for their job listings.
+
+\subsubsection{Profile Management}
+Employers can manage and update their profile information.
+
+\newpage
+
+\subsection{Admin Features}
+\subsubsection{Admin Dashboard}
+Administrators have access to a dashboard where they can manage both job seekers and employers and view system statistics.
+
+\subsubsection{Manage Job Seekers}
+Admins can view job seekers information. They can also edit their profile information.
+
+\subsubsection{Manage Employers}
+Admins can view employers information. They can also edit their profile information.
+\newpage
+
+\section{Database Structure}
+The database for this project consists of the following tables:
+\begin{itemize}
+    \item \textbf{users}: Stores job listings (user\_id, username, password, email, role, first\_name, last\_name, gender, date\_of\_birth, phone\_number, country, city).
+    \item \textbf{applications}: Stores job applications (application\_id, job\_id, username, application\_date).
+    \item \textbf{jobs}: Stores user profile details (job\_id, title, employer\_name, location, job\_type, description, salary\_range, application\_deadline, posted\_date, industry, benefits).
+\end{itemize}
+
+\newpage
+
+\section{Setup Instructions}
+\subsection{Installation}
+To set up the project on your local machine, follow these steps:
+
+\begin{enumerate}
+    \item Install XAMPP or MAMP and start the Apache and MySQL services.
+    \item Create a new database named \texttt{group1}.
+    \item Import the \texttt{group1.sql} file into the database via PhpMyAdmin.
+    \item Place the project files in the \texttt{htdocs} directory (for XAMPP) or the appropriate folder for MAMP.
+    \item Update the \texttt{config.php} file with the correct database connection details.
+\end{enumerate}
+
+\subsection{Usage}
+Once the setup is complete, you can access the portal by opening \texttt{localhost} in your web browser. The following features are available:
+\begin{itemize}
+    \item User Registration and Login
+    \item Search and Apply for Jobs (Job Seekers)
+    \item Create and Manage Job Listings (Employers)
+    \item Admin Dashboard for Managing Users
+\end{itemize}
+
+\newpage
+
+\section{External Interface Requirements}
+
+\subsection{User Interfaces}
+The system provides various user interfaces designed for different user types, including Job Seekers, Employers, and Admin. Below are some of the key user interfaces:
+
+\subsubsection{Login Page}
+The login page allows users to securely log in to their accounts using their credentials.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/login.png} 
+    \caption{Login Page}
+    \label{fig:login}
+\end{figure}
+
+\newpage
+
+
+\subsubsection{Registration Page}
+Job Seekers and Employers can create an account by providing necessary details.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/register.png} 
+    \caption{Registration Page}
+    \label{fig:register}
+\end{figure}
+
+\newpage
+
+\subsubsection{Reset Password Page}
+Users can reset their passwords via their emails.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/resetpassword.png} 
+    \caption{Reset Password Page}
+    \label{fig:resetPassword}
+\end{figure}
+
+\newpage
+
+\subsubsection{Job Seeker Dashboard}
+Job Seekers can view their job applications, search for new jobs and edit their profiles.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/jobseekerdashboard.png} 
+    \caption{Job Seeker Dashboard Page}
+    \label{fig:seeker_dashboard}
+\end{figure}
+
+\subsubsection{Search Jobs}
+Job seekers can search for jobs using various filters such as job title,  job type, location etc. Then, they can apply if they are interested with job.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/searchjob1.png} 
+    \caption{Search Job Page1}
+    \label{fig:search_job1}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/searchjob2.png} 
+    \caption{Search Job Page2}
+    \label{fig:search_job2}
+\end{figure}
+
+\newpage
+
+\subsubsection{View Applications}
+Job Seekers can view their job applications.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/viewApplications.png} 
+    \caption{View Applications Page}
+    \label{fig:viewApplications}
+\end{figure}
+
+
+\subsubsection{Job Seeker Profile}
+Job Seekers can view their profile information. They can edit their profile information.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/jobseekerprofile.png} 
+    \caption{Job Seeker Profile Page}
+    \label{fig:seeker_profile}
+\end{figure}
+
+\newpage
+
+\subsubsection{Employer Dashboard}
+Employers can post new job openings, manage their jobs, view applicants and view their profile information.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/employerDashboard.png} % Replace with your image path
+    \caption{Employer Dashboard}
+    \label{fig:employer_dashboard}
+\end{figure}
+
+\subsubsection{Posting Job}
+Employers can post new job listings by filling out job details with employer name, job title, job description, salary range, industry,  location, job type, benefits and application deadline.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/Job Posting.png} 
+    \caption{Posting Job}
+    \label{fig:postingJob}
+\end{figure}
+
+\newpage
+
+\subsubsection{Manage Job}
+Employers can view their jobs. They can edit or delete them.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/managejobview.png} 
+    \caption{Manage Job(View)}
+    \label{fig:manageJob(view)}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/managejobedit1.png} 
+    \caption{Manage Job(Edit1)}
+    \label{fig:manageJob(edit1)}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/managejobedit2.png}
+    \caption{Manage Job(Edit2)}
+    \label{fig:manageJob(edit2)}
+\end{figure}
+
+\subsubsection{View Applicants}
+Employers can view Job Seekers they applied for jobs.
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/viewapplicants.png} 
+    \caption{View Applicants}
+    \label{fig:viewApplicants}
+\end{figure}
+
+\newpage
+\subsubsection{Employer Profile}
+Employers can view their profile information. They can their profile information.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/employerprofile.png} 
+    \caption{Employer Profile}
+    \label{fig:employer_profile}
+\end{figure}
+
+
+
+\subsubsection{Admin Dashboard}
+The admin dashboard allows administrators to manage job seekers and employers. Also they can view system statistics.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/admindashboard.png}
+    \caption{Admin Dashboard}
+    \label{fig:admin_dashboard}
+\end{figure}
+
+\newpage
+
+\subsubsection{Manage Employers}
+Admins can view employers information. They can also edit their profile information.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/viewemployer.png}
+    \caption{Admin (View Employer)}
+    \label{fig:admin_viewEmployer}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/editemployer1.png}
+    \caption{Admin (Edit Employer1)}
+    \label{fig:admin_editEmployer1}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/editemployer2.png}
+    \caption{Admin (Edit Employer2)}
+    \label{fig:admin_editEmployer2}
+\end{figure}
+
+
+\subsubsection{Manage Job Seekers}
+Admins can view job seekers information. They can also edit their profile information.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/viewjobseeker.png}
+    \caption{Admin (View Job Seeker)}
+    \label{fig:admin_viewJobSeeker}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/editjobseeker1.png}
+    \caption{Admin (Edit Job Seeker1)}
+    \label{fig:admin_editJobSeeker1}
+\end{figure}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/editjobseeker2.png}
+    \caption{Admin (Edit Job Seeker2)}
+    \label{fig:admin_editJobSeeker2}
+\end{figure}
+
+\newpage
+
+\section{Conclusions}
+The Job Application Portal project successfully achieved its primary objective of creating a user-friendly platform that connects job seekers with employers. Through the implementation of various features such as user registration, job posting, application management, and administrative controls, the system provides a comprehensive solution for online job recruitment.
+
+The project demonstrates the successful application of web development technologies and database management principles to create a practical solution for the job market. Future enhancements could include features such as advanced search algorithms, integration with social media platforms, and implementation of a messaging system between employers and job seekers.
+
+\end{document}

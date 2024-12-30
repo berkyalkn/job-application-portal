@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Dashboard</title>
+    <link rel="stylesheet" href="../../assets/css/employer_dashboard.css">
+    <style>
+        .navbar {
+            background-color: #FF9800;
+            color: white;
+            padding: 15px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .navbar-title {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .navbar-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-links a, #logout-btn {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .navbar-links a:hover, #logout-btn:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <h1 class="navbar-title">Employer Dashboard</h1>
+            <ul class="navbar-links">
+                <li><a href="../../pages/employer_dashboard/employer_dashboard.html">Dashboard</a></li>
+                <li><a href="../../pages/employer_dashboard/post_job.php">Post a Job</a></li>
+                <li><a href="../../pages/employer_dashboard/manage_jobs.php">Manage Jobs</a></li>
+                <li><a href="../../pages/employer_dashboard/view_applicants.php">View Applicants</a></li>
+                <li><a href="../../pages/employer_dashboard/employer_profile.php">Profile</a></li>
+                <li><button id="logout-btn">Logout</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1 id="welcome-message">Welcome</h1>
+            <h2>Manage your job postings and review applications easily.</h2>
+        </header>
+
+        <div class="dashboard-content">
+            <div class="card">
+                <h2>Post a New Job</h2>
+                <p>Click below to post a new job opening.</p>
+                <a href="../../pages/employer_dashboard/post_job.php" class="btn">Post a Job</a>
+            </div>
+            <div class="card">
+                <h2>Manage Job Postings</h2>
+                <p>View and manage your active job postings.</p>
+                <a href="../../pages/employer_dashboard/manage_jobs.php" class="btn">Manage Jobs</a>
+            </div>
+            <div class="card">
+                <h2>View Applications</h2>
+                <p>Review applications submitted for your job postings.</p>
+                <a href="../../pages/employer_dashboard/view_applicants.php" class="btn">View Applicants</a>
+            </div>
+            <div class="card">
+                <h2>View and Edit Profile</h2>
+                <p>Click below to view your profile and edit.</p>
+                <a href="../../pages/employer_dashboard/employer_profile.php" class="btn">Go to Profile</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/js/employer_dashboard.js"></script>
+</body>
+</html>
